@@ -52,5 +52,4 @@ def fahrenheit_to_kelvin(degrees):
         >>>fahrenheit_to_kelvin(212)
         Decimal('373.15')        
     """
-    degrees = fahrenheit_to_celsius(degrees)+ABSOLUTE_DIFFERENCE
-    return degrees
+    return fahrenheit_to_celsius(degrees)+ABSOLUTE_DIFFERENCE
