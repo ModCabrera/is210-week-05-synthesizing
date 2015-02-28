@@ -2,10 +2,9 @@
 # -*- coding: utf-8 -*-
 """Week 5 Synthesizing Task"""
 
+import decimal
 
-from decimal import Decimal
-
-ABSOLUTE_DIFFERENCE = Decimal('273.15')
+ABSOLUTE_DIFFERENCE = decimal.Decimal('273.15')
 
 
 def fahrenheit_to_celsius(degrees):
@@ -20,7 +19,7 @@ def fahrenheit_to_celsius(degrees):
         >>>fahrenheit_to_celsius(212)
         Decimal('100')        
     """
-    result = Decimal((degrees-32)*5)/9
+    result = decimal.Decimal((degrees-32)*5)/9
     return result
 
 
@@ -36,7 +35,7 @@ def celsius_to_kelvin(degrees):
         >>>celcius_to_kevin(100)
         Decimal('373.15')        
     """
-    result = Decimal(ABSOLUTE_DIFFERENCE + degrees)
+    result = decimal.Decimal(ABSOLUTE_DIFFERENCE + degrees)
     return result
 
 
