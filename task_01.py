@@ -20,7 +20,7 @@ def fahrenheit_to_celsius(degrees):
         >>>fahrenheit_to_celsius(212)
         Decimal('100')
     """
-    celsius = decimal.Decimal((degrees-32)*5)/9
+    celsius = decimal.Decimal((int(degrees)-32)*5)/9
     return celsius
 
 
