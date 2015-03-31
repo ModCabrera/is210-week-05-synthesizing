@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-"""Week 5 Synthesizing Task"""
+"""Module contains functions to calculate degree measurements."""
 
 import decimal
 
@@ -11,45 +11,49 @@ def fahrenheit_to_celsius(degrees):
     """Does some math and returns celcius as decimal.
 
     Args:
-        degrees (int): Arg to be arithmetically subtracted from 32
-        then multiplied by 5, and divided by 9.
+        degrees (int): Degrees in Farenheit.
+
     Returns:
-        int: Arg is returned as a decimal representation of celsius temp.
+        celsius (int, decimal): Decimal representation of Celcius Temperature.
+
     Examples:
         >>>fahrenheit_to_celsius(212)
-        Decimal('100')        
+        Decimal('100')
     """
-    result = decimal.Decimal((degrees-32)*5)/9
-    return result
+    celsius = decimal.Decimal((degrees-32)*5)/9
+    return celsius
 
 
 def celsius_to_kelvin(degrees):
-    """Does some math and returns kelvin as decimal.
+    """Does some math and returns decimal representation of kelvin.
 
     Args:
-        degrees (int): Arg to be arithmetically incremented by ABSOLUTE_DIFFERENCE.
-        ABSOLUTE_DIFFERENCE (int): Arg to be airthmetically incremented by degrees.
+        degrees (int): Degrees in Celcius.
+        ABSOLUTE_DIFFERENCE (int): Airthmetically incremented by degrees.
+
     Returns:
-        int: Arguments are returned as a decimal representation of kelvin temperature.
+        kelvin (int ,decimal): Decimal representation of kelvin temperature.
+
     Examples:
         >>>celcius_to_kevin(100)
-        Decimal('373.15')        
+        Decimal('373.15')
     """
-    result = decimal.Decimal(ABSOLUTE_DIFFERENCE + degrees)
-    return result
+    kelvin = decimal.Decimal(ABSOLUTE_DIFFERENCE + degrees)
+    return kelvin
 
 
 def fahrenheit_to_kelvin(degrees):
-    """Does some math and returns degrees as decimal.
+    """Does some math and returns degrees as decimal represenation of kelvin.
 
     Args:
-        degrees (int): Arg to be arithmetically incremented by ABSOLUTE_DIFFERENCE.
-        fahrenheit_to_celsius (mixed): Arg to be arithmetically incremented by ABSOLUTE_DIFFERENCE.
-        ABSOLUTE_DIFFERENCE (int): Arg to be airthmetically incremented by degrees.
+        degrees (int): Degrees in Fahrenheit.
+
     Returns:
-        int: Arguments are returned as a decimal representation of kelvin temperature.
+        kelvin (int): Decimal representation of kelvin temperature.
+
     Examples:
         >>>fahrenheit_to_kelvin(212)
-        Decimal('373.15')        
+        Decimal('373.15')
     """
-    return fahrenheit_to_celsius(degrees)+ABSOLUTE_DIFFERENCE
+    kelvin = fahrenheit_to_celsius(degrees)+ABSOLUTE_DIFFERENCE
+    return kelvin
